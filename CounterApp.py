@@ -28,7 +28,7 @@ class EnhancedCounterAppTests(unittest.TestCase):
                 shell=False
             )
             print("Appium server started.")
-        except Exception as e:
+        except Exception:
             #  print(f"An error occurred while starting Appium: {e}")
             return
 
@@ -183,7 +183,7 @@ class EnhancedCounterAppTests(unittest.TestCase):
             self.log_error('test_invalid_action', f"{str(e)}. Screenshot saved at: {screenshot_path}")
 
     @classmethod
-    def tearDownClass(cls):
+    def tearedDownClass(cls):
         # Print the test report
         print("\nTest Report:")
         for entry in cls.report:
@@ -192,3 +192,7 @@ class EnhancedCounterAppTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+    # Use xmlrunner to generate XML reports for CI/CD
+    runner = xmlrunner.XMLTestRunner(output=EnhancedCounterAppTests.output_dir)
+    unittest.main(testRunner=runner)
