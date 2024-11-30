@@ -48,6 +48,7 @@ The test suite includes the following test cases:
 ```bash
 git clone https://your-repository-url.git
 cd enhanced-counter-app-tests
+
 ```
 
 ### 2. Install Dependencies
