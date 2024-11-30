@@ -1,0 +1,12 @@
+stages:
+  - test
+
+test:
+  image: appium/appium
+  services:
+    - name: appium/appium
+      alias: appium
+  script:
+    - apt-get update && apt-get install -y python3 python3-pip
+    - pip3 install -r requirements.txt  # Ensure you have a requirements.txt file
+    - python3 -m unittest discover -s tests  # Adjust the path to your test directory
