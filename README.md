@@ -62,7 +62,7 @@ pip install -r requirements.txt
 
 ### 4. Run Tests
 ```bash
-python -m unittest test_enhanced_counter_app.py
+python -m unittest CounterApp.py
 ```
 
 ## Test Report
@@ -86,11 +86,4 @@ The test suite includes robust error handling with:
 - Screenshot capture on test failure
 - Detailed error logging
 
-## Contributions
-Contributions, issues, and feature requests are welcome. Please check the [issues page](https://github.com/yourusername/enhanced-counter-app-tests/issues).
 
-## License
-[Specify your license here, e.g., MIT License]
-
-## Contact
-[Your Name/Contact Information]
